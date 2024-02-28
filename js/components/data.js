@@ -1,6 +1,6 @@
 const data = {
     style: "span",
-    buttons: ["CE", "+/-",'%',"+", "1", "2", "3","-", "4","5",'6','x','7','8','9','/','0','.','='
+    buttons: ["CE", "+/-",'%',"+", "1", "2", "3","-", "4","5",'6','*','7','8','9','/','0','.','='
     ],
    
 }
@@ -31,9 +31,15 @@ for (let i=2; i<btnDOM.length; i++){
         stepsDOM.innerText += btnDOM[i].innerText;});
 
     btnDOM[i].addEventListener("click", ()=>{
-        let aha = [];
-       aha.push(stepsDOM.innerText);})
-    }
+
+            let aha = [];
+            aha.push(stepsDOM.innerText);
+           console.log(aha.map(a=>eval(a)))
+           displayDOM.innerText = aha.map(a=>eval(a))  
+        })
+
+}
+    
 
 
 
