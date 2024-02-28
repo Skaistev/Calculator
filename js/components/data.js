@@ -30,30 +30,24 @@ for (let i=2; i<btnDOM.length; i++){
     btnDOM[i].addEventListener("click", ()=>{
         stepsDOM.innerText += btnDOM[i].innerText;});
 
-    btnDOM[i].addEventListener("click", ()=>{
-
-            let aha = [];
-            aha.push(stepsDOM.innerText);
-           console.log(aha.map(a=>eval(a)))
-           displayDOM.innerText = aha.map(a=>eval(a))  
-        })
+    // btnDOM[i].addEventListener("click", ()=>{
+    //         let aha = [];
+    //         aha.push(stepsDOM.innerText);
+    //        console.log(aha.map(a=>eval(a)))
+    //        displayDOM.innerText = aha.map(a=>eval(a))  
+    //     })
 
 }
-    
-
-
-
 
 btnDOM[0].addEventListener('click', clearDisplay)
 btnDOM[1].addEventListener('click', plusMinus)
 
-
-
 function clearDisplay(event){
-    stepsDOM.innerText = ''}
+    stepsDOM.innerText = ''
+    displayDOM.innerText = ''
+}
 
- 
+   
 function plusMinus(event){
-    // console.log(stepsDOM.innerText)
-    // stepsDOM.innerText = btnDOM[1].innerText.toggle("-")
+
 }
